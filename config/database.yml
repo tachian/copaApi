@@ -1,0 +1,26 @@
+production:
+  adapter: mysql2
+  reconnect: false
+  database: heroku_database_provider
+  pool: 5
+  username: heroku_db_username
+  password: heroku_db_password
+  host: heroku_database_host
+
+development:
+  adapter: mysql2
+  reconnect: false
+  database: copa_develoment
+  pool: 5
+  username: root
+  password: 
+  host: localhost
+
+test:
+  adapter: mysql2
+  reconnect: false
+  database: copa_test
+  pool: 5
+  username: root
+  password: 
+  host: localhost
