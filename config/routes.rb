@@ -8,7 +8,55 @@ CopaApi::Application.routes.draw do
     constraints ApiConstraints.new(1) do
       scope module: 'v1' do
 
-        resources :teams
+        resources :companies
+
+        resources :teams do
+          resources :members
+        end
+
+        resources :members
+
+        resources :simple_questions do
+          resources :simple_question_alternatives
+          resources :test_guide_basics
+        end
+
+        resources :simple_question_alternatives
+
+        resources :group_questions do
+          resources :test_guide_basics
+          resources :group_question_statements do
+            resources :group_question_alternatives
+          end
+        end
+
+        resources :group_question_statements do
+          resources :group_question_alternatives
+        end
+        
+        resources :group_question_alternatives        
+
+        resources :tests do
+          resources :test_guide_basics
+          resources :test_guide_analyses
+        end
+
+        resources :test_types do
+          resources :test_guide_basics
+        end
+
+        resources :test_guide_basics
+
+        resources :test_guide_analyses do
+          resources :test_guide_scenarios
+        end
+
+        resources :test_guide_scenarios do          
+          resources :test_guide_scenario_sas  
+          resources :test_guide_scenario_aps
+        end
+
+        
 
       end
     end

@@ -35,6 +35,7 @@ class ApplicationController < ActionController::Metal
   # Enable rescue_from errors
   include ActionController::Rescue
 
+
   # Custom error handling
   rescue_from StandardError, with: :error_handler
 

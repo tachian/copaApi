@@ -24,7 +24,7 @@ module Api
 
       # GET /teams/1/edit
       def edit
-        render status: :ok, json: @university
+        render status: :ok, json: @team
       end
 
       def create
