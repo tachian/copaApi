@@ -47,8 +47,6 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'rb-fsevent', :group => :development
-
 group :development do
   # improve errors read and interaction
   gem 'better_errors'
