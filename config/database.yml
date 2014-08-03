@@ -1,12 +1,3 @@
-production:
-  adapter: mysql2
-  reconnect: false
-  database: heroku_database_provider
-  pool: 5
-  username: heroku_db_username
-  password: heroku_db_password
-  host: heroku_database_host
-
 development:
   adapter: mysql2
   reconnect: false
